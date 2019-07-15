@@ -1,6 +1,10 @@
 
 "use strict";
 
+/*
+*   Get all the needed elements from html
+*   Create an array with necessary icons for the game 
+*/
 let icons = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt",
     "fa fa-cube", "fa fa-leaf", "fa fa-bicycle", "fa fa-bomb"];
 icons = icons.concat(icons);
@@ -21,6 +25,7 @@ class Game {
     openedCards;
     matchChecker;
     timeTracker;
+
     constructor() {
         this.cards = [];
         this.openedCards = [];
@@ -29,6 +34,10 @@ class Game {
         this.timeTracker = undefined;
     }
 
+    /*
+    *   With game loading shuffle the icon array and implement them 
+    *   into the html DOM
+    */
     loadingCards() {
         icons = shuffle(icons);
 
@@ -46,6 +55,10 @@ class Game {
 
     }
 
+    /*
+    *   Give five seconds to remember the cards by changing the class name
+    *   then game starts 
+    */
     timeToMemory() {
 
         setTimeout(() => {
