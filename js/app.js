@@ -77,16 +77,20 @@ class Game {
 
     playGame() {
         this.timeTracker = setInterval(timeCounter, 1000);
-        let starCount = setInterval(this.starTracker, 1000);
+        setInterval(this.starTracker, 1000);
 
-        reStart.addEventListener("click", this.restartGame);
+        reStart.addEventListener("click", () => {
+            clearTimeout(this.timeTracker);
+            this.restartGame();
+        });
 
         for (let i = 0; i < this.cards.length; i++) {
             this.cards[i].addEventListener("click", () => {
                 if (!this.cards[i].classList.contains("open")) {
                     this.cards[i].className += " open show";
                 }
-                if (!this.cards[i].classList.contains("match")) {
+                if (!this.cards[i].classList.contains("match") && 
+                !this.openedCards.includes(this.cards[i])) {
                     this.moveTracker += 1;
                     moveCount.innerHTML = this.moveTracker;
                     this.checkMatch(this.cards[i]);
@@ -135,13 +139,15 @@ class Game {
 
     gameEnd() {
         this.createPanel();
-        clearInterval(this.timeTracker);
         deck.style.opacity = 0.5;
         let close = document.querySelector("div .panel a");
         close.addEventListener("click", () => {
             document.getElementsByClassName("victoryPanel")[0].remove();
             deck.style.opacity = 1;
-            reStart.addEventListener("click", this.restartGame);
+            reStart.addEventListener("click", () => {
+                clearTimeout(this.timeTracker);
+                this.restartGame();
+            });
         });
 
         let button = document.querySelector("div .panel button");
@@ -185,21 +191,7 @@ class Game {
     }
 
     restartGame() {
-        clearInterval(this.timeTracker);
-        totalSeconds = 0;
-        while (stars.childElementCount < 3) {
-            let newStar = document.createElement("li");
-            let newIcon = document.createElement("i");
-            newIcon.setAttribute("class", "fa fa-star");
-            newStar.appendChild(newIcon);
-            stars.appendChild(newStar);
-        }
-        deck.innerHTML = '';
-        secLabel.innerHTML = "00";
-        minLabel.innerHTML = "00";
-        this.moveTracker = 0;
-        moveCount.innerHTML = this.moveTracker;
-        this.loadingCards();
+        location.reload();
     }
 
 }

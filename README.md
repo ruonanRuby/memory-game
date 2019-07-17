@@ -2,19 +2,21 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+* [General Introduction](#General Introduction) 
+* [How The Game Works] (#how-the-game-works)
+* [Resources] (#resources)
 
-## Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+## Genera Introduction 
 
-To get started, open `js/app.js` and start building out the app's functionality
+This is an Udacity Front-End Developer Project, with the practice of combining skills in HTML,CSS and JavaScript into a large project. At the same time, you will learn how to design the workflow and better way to organize the JS code. 
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+## How The Game Works 
 
-## Contributing
+This is a typical match game, the deck is made up of eight different pairs of cards. In order to win the game, you need to flip the hidden cards and match them. The number of movement and Time counting will affect the final star rating. 
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+-> When the game is loaded, the player will have five seconds to remeber the positions of cards
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+<img src = "img/memoryCards.gif" alt="memory">
+
+->
