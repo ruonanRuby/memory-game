@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-* [General Introduction](#General Introduction) 
-* [How The Game Works] (#how-the-game-works)
-* [Resources] (#resources)
+* [General Introduction](#General-Introduction) 
+* [How The Game Works](#how-the-game-works)
+* [Resources](#resources)
 
 
 ## Genera Introduction 
@@ -15,20 +15,20 @@ This is an Udacity Front-End Developer Project, with the practice of combining s
 
 This is a typical match game, the deck is made up of eight different pairs of cards. In order to win the game, you need to flip the hidden cards and match them. The number of movement and Time counting will affect the final star rating. 
 
--> When the game is loaded, the player will have five seconds to remeber the positions of cards
+-> When the game is loaded, the player will have five seconds to remeber the positions of cards.
 
 <img src = "img/memoryCards.gif" alt="memory">
 
 -> Once all cards are back to hidden, the time counter starts, and the player can start the game. Flipping two cards to see either they are matched or not. Also the player can restart the game whenever he likes.
 
-<img src = "img/cardMatching.gif" alt="cardMatching">
+<img src = "img/cardsMatching.gif" alt="cardMatching">
 
 -> When user's move is larger than 25 or the time is more than 2 minutes, he will lose a star. 
 When user's move is larger than 40 or time is more than 4 minutes he lose one more star.
 
 <img src = "img/starRating.gif" alt = "starRating">
 
--> After all cards are matched, the user will have a modal to congratulate the player, and the player can restart the game by either play again button or restart icon on the deck. 
+-> After all cards are matched, the user will have a modal to congratulate the player, and the player can restart the game by either play again button or the restart icon on the deck. 
 
 <img src = "img/gameResult.gif" alt="gameResult">
 
