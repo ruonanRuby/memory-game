@@ -12,6 +12,11 @@
 This is an Udacity Front-End Developer Project, with the practice of combining skills in HTML,CSS and JavaScript into a large project. At the same time, you will learn how to design the workflow and better way to organize the JS code. 
 
 ## How The Game Works 
+Click [here](https://ruonanruby.github.io/memory-game/) to play the game 
+
+***OR***
+
+check the following steps to learn more about the game.
 
 This is a typical match game, the deck is made up of eight different pairs of cards. In order to win the game, you need to flip the hidden cards and match them. The number of movement and Time counting will affect the final star rating. 
 
